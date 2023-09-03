@@ -1,3 +1,5 @@
+package dat250assignment1;
+
 import io.javalin.Javalin;
 
 public class App {
@@ -47,36 +49,93 @@ public class App {
                 .post("/convert", ctx -> {
                     double value = Double.parseDouble(ctx.formParam("value"));
                     String fromUnit = ctx.formParam("sunit");
+                    Unit f = Unit.NAN;
                     String toUnit = ctx.formParam("tunit");
-                    double inMeters;
+                    Unit t = Unit.NAN;
+                    double inMETERs;
                     if (fromUnit.equals("in")) {
-                        inMeters = value * IN_TO_METER;
+                        f = Unit.INCHES;
                     } else if (fromUnit.equals("ft")) {
-                        inMeters = value * FT_TO_METER;
+                        f = Unit.FEET;
                     } else if (fromUnit.equals("mi")) {
-                        inMeters = value * MI_TO_METER;
+                        f = Unit.MILES;
                     } else if (fromUnit.equals("m")) {
-                        inMeters = value;
+                        f = Unit.FEET;
                     } else {
-                        inMeters = Double.NaN;
+                        inMETERs = Double.NaN;
                     }
                     double result;
                     if (toUnit.equals("in")) {
-                        result = inMeters / IN_TO_METER;
+                        t = Unit.INCHES;
                     } else if (toUnit.equals("ft")) {
-                        result = inMeters / FT_TO_METER;
+                        t = Unit.FEET;
                     } else if (toUnit.equals("mi")) {
-                        result = inMeters / MI_TO_METER;
+                        t = Unit.MILES;
                     } else if (toUnit.equals("m")) {
-                        result = inMeters;
+                        t = Unit.METERS;
                     } else {
                         result = Double.NaN;
                     }
-                    ctx.result(Double.toString(result));
+                    ctx.result(Double.toString(convertUnit(value, f, t)));
                 })
                 .start(9000);
     }
 
 
+    public static double convertUnit(double value, Unit fromUnit, Unit toUnit) {
+        switch (fromUnit) {
+            case FEET:
+                switch (toUnit) {
+                    case INCHES:
+                        return value * 12.0;
+                    case MILES:
+                        return value / 5280.0;
+                    case METERS:
+                        return value * 0.3048;
+                    default:
+                        throw new IllegalArgumentException("Unsupported conversion: " + fromUnit + " to " + toUnit);
+                }
+
+            case INCHES:
+                switch (toUnit) {
+                    case FEET:
+                        return value / 12.0;
+                    case MILES:
+                        return value / 63360.0;
+                    case METERS:
+                        return value * 0.0254;
+                    default:
+                        throw new IllegalArgumentException("Unsupported conversion: " + fromUnit + " to " + toUnit);
+                }
+
+            case MILES:
+                switch (toUnit) {
+                    case FEET:
+                        return value * 5280.0;
+                    case INCHES:
+                        return value * 63360.0;
+                    case METERS:
+                        return value * 1609.34;
+                    default:
+                        throw new IllegalArgumentException("Unsupported conversion: " + fromUnit + " to " + toUnit);
+                }
+
+            case METERS:
+                switch (toUnit) {
+                    case FEET:
+                        return value * 3.28084;
+                    case INCHES:
+                        return value * 39.3701;
+                    case MILES:
+                        return value * 0.000621371;
+                    default:
+                        throw new IllegalArgumentException("Unsupported conversion: " + fromUnit + " to " + toUnit);
+                }
+
+            default:
+                throw new IllegalArgumentException("Unsupported conversion: " + fromUnit + " to " + toUnit);
+        }
+    }
 }
+
 

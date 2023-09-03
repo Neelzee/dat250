@@ -23,6 +23,8 @@ dependencies {
 
     // This dependency is used by the application.
     implementation("com.google.guava:guava:32.1.1-jre")
+    implementation("org.javatuples:javatuples:1.2")
+    implementation("io.javalin:javalin:5.6.1")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
