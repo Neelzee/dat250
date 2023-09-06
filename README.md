@@ -13,3 +13,8 @@ By doing this assignment, I validated that java, intellij, gradle and podman wor
 
 ## conclusion
 Other than that, I did not encounter any other technical problems, nor any other issue.
+
+
+## Docker
+
+https://hub.docker.com/repository/docker/neelzee/dat250/general
