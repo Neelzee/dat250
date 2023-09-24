@@ -4,7 +4,7 @@
 
 ## Validation of MongoDB
 
-![Validation failed](a3/validation_failed.png)
+![Validation failed](https://github.com/Neelzee/dat250/blob/main/a3/validation_failed.png)
 
 The validation failed, which is interesting.
 
@@ -12,25 +12,25 @@ The validation failed, which is interesting.
 
 ### Insert
 
-![Insert](a3/insert.png)
+![Insert](https://github.com/Neelzee/dat250/blob/main/a3/insert.png)
 
 ### Find
 
-![Find](a3/find.png)
+![Find](https://github.com/Neelzee/dat250/blob/main/a3/find.png)
 
-![Find](a3/find_2.png)
+![Find](https://github.com/Neelzee/dat250/blob/main/a3/find_2.png)
 
 ### Update
 
-![Update](a3/update.png)
+![Update](https://github.com/Neelzee/dat250/blob/main/a3/update.png)
 
 ### Delete
 
-![Delete](a3/delete.png)
+![Delete](https://github.com/Neelzee/dat250/blob/main/a3/delete.png)
 
 ### Bulkwrite
 
-![Bulkwrite](a3/bulkwrite.png)
+![Bulkwrite](https://github.com/Neelzee/dat250/blob/main/a3/bulkwrite.png)
 
 ## Experiment 2 example working and Map-reduce operation
 
