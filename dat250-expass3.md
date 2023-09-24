@@ -4,7 +4,7 @@
 
 ## Validation of MongoDB
 
-![Validation failed](https://github.com/Neelzee/dat250/blob/main/a3/validation_failed.png?raw=true)
+![Validation failed](https://github.com/Neelzee/dat250/blob/main/a3/validation_failed.png)
 
 The validation failed, which is interesting.
 
@@ -12,25 +12,25 @@ The validation failed, which is interesting.
 
 ### Insert
 
-![Insert](https://github.com/Neelzee/dat250/blob/main/a3/insert.png?raw=true)
+![Insert](https://github.com/Neelzee/dat250/blob/main/a3/insert.png)
 
 ### Find
 
-![Find](https://github.com/Neelzee/dat250/blob/main/a3/find.png?raw=true)
+![Find](https://github.com/Neelzee/dat250/blob/main/a3/find.png)
 
-![Find](https://github.com/Neelzee/dat250/blob/main/a3/find_2.png?raw=true)
+![Find](https://github.com/Neelzee/dat250/blob/main/a3/find_2.png)
 
 ### Update
 
-![Update](https://github.com/Neelzee/dat250/blob/main/a3/update.png?raw=true)
+![Update](https://github.com/Neelzee/dat250/blob/main/a3/update.png)
 
 ### Delete
 
-![Delete](https://github.com/Neelzee/dat250/blob/main/a3/delete.png?raw=true)
+![Delete](https://github.com/Neelzee/dat250/blob/main/a3/delete.png)
 
 ### Bulkwrite
 
-![Bulkwrite](https://github.com/Neelzee/dat250/blob/main/a3/bulkwrite.png?raw=true)
+![Bulkwrite](https://github.com/Neelzee/dat250/blob/main/a3/bulkwrite.png)
 
 ## Experiment 2 example working and Map-reduce operation
 
