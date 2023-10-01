@@ -34,6 +34,37 @@ The validation failed, which is interesting.
 
 ## Experiment 2 example working and Map-reduce operation
 
-## Why use Map-reduce
+### Aggregate
+
+![Aggregate](https://github.com/Neelzee/dat250/blob/main/a3/aggregate.PNG?raw=true)
+
+### Map reduce
+
+![Map Reduce](https://github.com/Neelzee/dat250/blob/main/a3/map_reduce.PNG?raw=true)
+
+### Why use Map-reduce
+
+In the example, I can now see the total price each costumer has. So, if it was a java object, with the price attribute,
+what I did with map reduce, is the same as this psuedo-java code:
+
+```java
+
+HashMap<Customer, Int> price = new HashMap<>();
+
+for (Customer c : Customer.AllCustomers) {
+  if (price.getKeys().contains(c)) {
+    price[c] += c.price;
+  else {
+    price.add(c, c.price);
+  }
+}
+```
+
+But the code in mongo is faster, since I dont have to transform a table-row into a java object.
 
 # Issues
+
+I used mongosh, and following the examples was a little difficult, since the copy/paste method did not work.
+
+So for the larger examples, with more repetivive code, like the map reduce, I had too open notepad++,
+and rewrite the code into a singleline, then I could easily copy paste the code.
